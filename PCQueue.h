@@ -55,7 +55,7 @@ int my_ceil(float num) {
 
 void pop_quarter_elemets_randomly(PCQueue* q){
     pthread_mutex_lock(&(q->lock));
-    float float_num=0.25 * (float)(getMaxSize(q->queue));
+    float float_num=0.30 * (float)(getMaxSize(q->queue));
     int quarter = my_ceil(float_num);
     for(int i=0; i<quarter; i++){
         int random_place = rand() % (getMaxSize(q->queue));
